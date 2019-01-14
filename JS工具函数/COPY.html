@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>兼容性较强的文本复制 | my-blog</title>
+    <meta name="description" content="">
+    
+    
+    <link rel="preload" href="/Right-Now-FE/assets/css/0.styles.04fb8f2a.css" as="style"><link rel="preload" href="/Right-Now-FE/assets/js/app.da51bc2c.js" as="script"><link rel="preload" href="/Right-Now-FE/assets/js/3.c2b96e9a.js" as="script"><link rel="prefetch" href="/Right-Now-FE/assets/js/10.0f8bb63a.js"><link rel="prefetch" href="/Right-Now-FE/assets/js/11.71156ca5.js"><link rel="prefetch" href="/Right-Now-FE/assets/js/12.beec3a12.js"><link rel="prefetch" href="/Right-Now-FE/assets/js/13.710a050a.js"><link rel="prefetch" href="/Right-Now-FE/assets/js/14.42be726a.js"><link rel="prefetch" href="/Right-Now-FE/assets/js/15.592f8c87.js"><link rel="prefetch" href="/Right-Now-FE/assets/js/16.b04860c1.js"><link rel="prefetch" href="/Right-Now-FE/assets/js/17.a6a63bb2.js"><link rel="prefetch" href="/Right-Now-FE/assets/js/18.a248f5bc.js"><link rel="prefetch" href="/Right-Now-FE/assets/js/2.d2be315b.js"><link rel="prefetch" href="/Right-Now-FE/assets/js/4.fd40bd54.js"><link rel="prefetch" href="/Right-Now-FE/assets/js/5.5e5c38f5.js"><link rel="prefetch" href="/Right-Now-FE/assets/js/6.cd286956.js"><link rel="prefetch" href="/Right-Now-FE/assets/js/7.8eead0a3.js"><link rel="prefetch" href="/Right-Now-FE/assets/js/8.6e425ce3.js"><link rel="prefetch" href="/Right-Now-FE/assets/js/9.eeb47304.js">
+    <link rel="stylesheet" href="/Right-Now-FE/assets/css/0.styles.04fb8f2a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/Right-Now-FE/" class="home-link router-link-active"><!----> <span class="site-name">my-blog</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><!---->  <!----> </div> <div class="page"> <div class="content"><h1 id="兼容性较强的文本复制"><a href="#兼容性较强的文本复制" aria-hidden="true" class="header-anchor">#</a> 兼容性较强的文本复制</h1> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">copy</span><span class="token punctuation">(</span>input<span class="token punctuation">,</span> callback<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> textToClipboard <span class="token operator">=</span> input<span class="token punctuation">;</span>
+
+    <span class="token keyword">var</span> success <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>clipboardData<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// Internet Explorer</span>
+        window<span class="token punctuation">.</span>clipboardData<span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token string">&quot;Text&quot;</span><span class="token punctuation">,</span> textToClipboard<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        <span class="token comment">// create a temporary element for the execCommand method</span>
+        <span class="token keyword">var</span> forExecElement <span class="token operator">=</span> <span class="token function">CreateElementForExecCommand</span><span class="token punctuation">(</span>textToClipboard<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">/* Select the contents of the element
+            (the execCommand for 'copy' method works on the selection) */</span>
+        <span class="token function">SelectContent</span><span class="token punctuation">(</span>forExecElement<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token keyword">var</span> supported <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token comment">// UniversalXPConnect privilege is required for clipboard access in Firefox</span>
+        <span class="token keyword">try</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>netscape <span class="token operator">&amp;&amp;</span> netscape<span class="token punctuation">.</span>security<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                netscape<span class="token punctuation">.</span>security<span class="token punctuation">.</span>PrivilegeManager<span class="token punctuation">.</span><span class="token function">enablePrivilege</span><span class="token punctuation">(</span><span class="token string">&quot;UniversalXPConnect&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token comment">// Copy the selected content to the clipboard</span>
+            <span class="token comment">// Works in Firefox and in Safari before version 5</span>
+            success <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">execCommand</span><span class="token punctuation">(</span><span class="token string">&quot;copy&quot;</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            success <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// remove the temporary element</span>
+        document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">removeChild</span><span class="token punctuation">(</span>forExecElement<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>success<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">(</span><span class="token keyword">typeof</span> callback <span class="token operator">==</span> <span class="token string">'function'</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;无法复制&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">CreateElementForExecCommand</span> <span class="token punctuation">(</span>textToClipboard<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> forExecElement <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">&quot;div&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// place outside the visible area</span>
+    forExecElement<span class="token punctuation">.</span>style<span class="token punctuation">.</span>position <span class="token operator">=</span> <span class="token string">&quot;absolute&quot;</span><span class="token punctuation">;</span>
+    forExecElement<span class="token punctuation">.</span>style<span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token string">&quot;-10000px&quot;</span><span class="token punctuation">;</span>
+    forExecElement<span class="token punctuation">.</span>style<span class="token punctuation">.</span>top <span class="token operator">=</span> <span class="token string">&quot;-10000px&quot;</span><span class="token punctuation">;</span>
+    <span class="token comment">// write the necessary text into the element and append to the document</span>
+    forExecElement<span class="token punctuation">.</span>textContent <span class="token operator">=</span> textToClipboard<span class="token punctuation">;</span>
+    document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>forExecElement<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// the contentEditable mode is necessary for the  execCommand method in Firefox</span>
+    forExecElement<span class="token punctuation">.</span>contentEditable <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> forExecElement<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">SelectContent</span> <span class="token punctuation">(</span>element<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// first create a range</span>
+    <span class="token keyword">var</span> rangeToSelect <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createRange</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    rangeToSelect<span class="token punctuation">.</span><span class="token function">selectNodeContents</span><span class="token punctuation">(</span>element<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// select the contents</span>
+    <span class="token keyword">var</span> selection <span class="token operator">=</span> window<span class="token punctuation">.</span><span class="token function">getSelection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    selection<span class="token punctuation">.</span><span class="token function">removeAllRanges</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    selection<span class="token punctuation">.</span><span class="token function">addRange</span><span class="token punctuation">(</span>rangeToSelect<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+</code></pre></div><h2 id="提示"><a href="#提示" aria-hidden="true" class="header-anchor">#</a> 提示</h2> <p>在请求接口的success里面 无法复制成功</p></div> <div class="page-edit"><!----> <!----></div> <!----> </div> <!----></div></div>
+    <script src="/Right-Now-FE/assets/js/app.da51bc2c.js" defer></script><script src="/Right-Now-FE/assets/js/3.c2b96e9a.js" defer></script>
+  </body>
+</html>
