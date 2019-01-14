@@ -4,3 +4,4 @@
 4.setting sync 一键同步你的vscode配置 和所有插件 妈妈再也不用担心我换电脑了
 5.view in browser 打开当前html文件 
 6.英汉词典 一键翻译英文
+7.复制文件相对路径 copy-relative-path
