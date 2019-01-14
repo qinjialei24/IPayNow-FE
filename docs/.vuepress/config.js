@@ -2,7 +2,7 @@ const { sidebar } = require('./config/sidebar')
 const { nav } = require('./config/nav')
 
 module.exports = {
-     title: 'Right-Now-FE',  // 设置网站标题
+    title: 'Right-Now-FE',  // 设置网站标题
     description: '现在支付前端团队文档',
     dest: 'docs/.vuepress/dist',    // 设置输出目录
     base: '/Right-Now-FE/', // 项目名称

@@ -4,11 +4,12 @@
 - **<font size="5" color='#3eaf7c'>前后端接口开发规范</font>**
 - **<font size="5" color='#3eaf7c'>现在支付前端团队组件库(Vue)</font>**
 - **<font size="5" color='#3eaf7c'>Vue入门基础</font>**
+- **<font size="5" color='#3eaf7c'>Vue进阶</font>**
 - **<font size="5" color='#3eaf7c'><a href="/mixins/loading.html" title="标题">Mixins</a></font>**
-- **<font size="5" color='#3eaf7c'>Utils</font>**
+- **<font size="5" color='#3eaf7c'>常用JS工具函数</font>**
 - **<font size="5" color='#3eaf7c'>基于Vue的权限管理解决方案</font>**
-- **<font size="5" color='#3eaf7c'>技术文章</font>**
-- **<font size="5" color='#3eaf7c'>项目</font>**
+- **<font size="5" color='#3eaf7c'>技术文章精选</font>**
+- **<font size="5" color='#3eaf7c'>各前端项目文档</font>**
 - **<font size="5" color='#3eaf7c'>实用的vscode插件</font>**
 
 
