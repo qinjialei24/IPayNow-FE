@@ -8,7 +8,7 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
 <iframe style='position:fixed;width:100%;height:100%;z-index:-1;top:0;left:0;' src='http://pixijs.teamgbaws.net/header/'></iframe>
 
 <div style="text-align: center">
-  <Bit/>
+  <!-- <Bit/> -->
 </div>
 
 <div class="features">
@@ -26,6 +26,10 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
     <p>VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.</p>
   </div>
 </div>
+
+<!-- <script>
+alert(1)  
+</script>   -->
 
 ### As Easy as 1, 2, 3
 
