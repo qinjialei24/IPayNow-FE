@@ -30,6 +30,28 @@ module.exports = {
                 encodeURI('/electron踩坑/设置透明窗口时的兼容性问题')//vuepress 不支持中文文件名 先解码一下 
             ]
         },
+        {
+            title: 'JS工具函数',
+            collapsable: true,
+            children: [
+                encodeURI('/JS工具函数/COPY.md')//vuepress 不支持中文文件名 先解码一下 
+            ]
+        },
+        {
+            title: '小程序相关2',
+            collapsable: true,
+            children: [
+                encodeURI('/小程序相关/禁止再次分享.md')//vuepress 不支持中文文件名 先解码一下 
+            ]
+        },
+        {
+            title: 'Vue基础与进阶',
+            collapsable: true,
+            children: [
+                encodeURI('/Vue基础与进阶/基础/xxx.md'),
+                // encodeURI('/Vue基础与进阶/进阶/使用mixin复用业务逻辑.md'),
+            ]
+        },
 
     ]
 }

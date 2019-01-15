@@ -8,9 +8,12 @@ module.exports = {
     base: '/Right-Now-FE/', // 项目名称
     repo: 'https://leeesin/github.io/Right-Now-FE', // 添加 github 链接
     themeConfig: {
-        lastUpdated: 'Last Updated', // string | boolean
+        lastUpdated: '上次更新', // string | boolean
         nav,//导航栏
         sidebar,//侧边栏
-        sidebarDepth: 1
-    }
+        sidebarDepth: 2
+    },
+    plugins: [
+        require('./plugins/watch-file/index.js')
+    ]
 }
