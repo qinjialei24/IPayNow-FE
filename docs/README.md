@@ -1,33 +1,20 @@
 ---
 home: true
 heroImage: /logo.png
-actionText: Get Started →
-actionLink: /zh/guide/
+actionText: 进入文档 →
+actionLink: /简介.html/
 footer: MIT Licensed | Copyright © 2018-present Evan You
+pageClass: index-page-class
 ---
-<iframe style='position:fixed;width:100%;height:100%;top:0;left:0;' src='https://meisiwan.github.io/cloud/'></iframe>
 
 <div style="text-align: center">
   <!-- <Bit/> -->
 </div>
+<iframe style='position:fixed;width:100%;height:100%;top:0;left:0;' src='https://meisiwan.github.io/cloud/'></iframe>
 
 <div class="features" style='position:relative;z-index:1;background:transparent;'>
-<div>
-<a href="/sync-date-picker.html" style='display: inline-block;
-    font-size: 1.2rem;
-    color: #fff;
-    background-color: #3eaf7c;
-    padding: .8rem 1.6rem;
-    border-radius: 4px;
-    -webkit-transition: background-color .1s ease;
-    transition: background-color .1s ease;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    border-bottom: 1px solid #389d70;' >进入文档 →</a>
-</div>
   <div class="feature">
     <h2>Simplicity First</h2>
-    <img src='/logo.png'>
     <p>Minimal setup with markdown-centered project structure helps you focus on writing.</p>
   </div>
   <div class="feature">
