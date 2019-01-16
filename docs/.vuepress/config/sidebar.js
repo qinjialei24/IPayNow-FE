@@ -1,7 +1,7 @@
 module.exports = {
     sidebar: [
         {
-            title: 'guide',
+            title: '简介',
             collapsable: true,
             children: [
                 '/guide'

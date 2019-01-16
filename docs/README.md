@@ -13,7 +13,7 @@ footer: MIT Licensed | Copyright © 2018-present Evan You
 
 <div class="features" style='position:relative;z-index:1;background:transparent;'>
 <div>
-<a href="/xxx" style='display: inline-block;
+<a href="/sync-date-picker.html" style='display: inline-block;
     font-size: 1.2rem;
     color: #fff;
     background-color: #3eaf7c;
@@ -64,15 +64,3 @@ vuepress build
 ::: warning COMPATIBILITY NOTE
 VuePress requires Node.js >= 8.
 :::
-<!-- # 现在支付前端团队文档
-
-- **<font size="5" color='#3eaf7c'>前端代码开发规范</font>**
-- **<font size="5" color='#3eaf7c'>前后端接口开发规范</font>**
-- **<font size="5" color='#3eaf7c'>现在支付前端团队组件库(Vue)</font>**
-- **<font size="5" color='#3eaf7c'>Vue教程</font>**
-- **<font size="5" color='#3eaf7c'><a href="/mixins/loading.html" title="标题">Mixins</a></font>**
-- **<font size="5" color='#3eaf7c'>常用JS工具函数</font>**
-- **<font size="5" color='#3eaf7c'>基于Vue的权限管理解决方案</font>**
-- **<font size="5" color='#3eaf7c'>技术文章精选</font>**
-- **<font size="5" color='#3eaf7c'>各前端项目文档</font>**
-- **<font size="5" color='#3eaf7c'>实用的vscode插件</font>** -->
