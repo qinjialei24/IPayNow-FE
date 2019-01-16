@@ -2,36 +2,29 @@
 home: true
 heroImage: /logo.png
 actionText: 进入文档 →
-actionLink: /简介.html/
-footer: MIT Licensed | Copyright © 2018-present Evan You
+actionLink: /sync-date-picker.html
+footer:  Copyright ©iPayNow 2017 京ICP备13029197号
 pageClass: index-page-class
 ---
 
-<div style="text-align: center">
-  <!-- <Bit/> -->
-</div>
 <iframe style='position:fixed;width:100%;height:100%;top:0;left:0;' src='https://meisiwan.github.io/cloud/'></iframe>
 
 <div class="features" style='position:relative;z-index:1;background:transparent;'>
   <div class="feature">
-    <h2>Simplicity First</h2>
-    <p>Minimal setup with markdown-centered project structure helps you focus on writing.</p>
+    <h2>提高效率</h2>
+    <p>总结各个场景下的最佳实践,提高开发效率,相互学习</p>
   </div>
   <div class="feature">
-    <h2>Vue-Powered</h2>
-    <p>Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.</p>
+    <h2>鼓励分享</h2>
+    <p>每个团队成员可以将平时开发中好的想法心得、工具发布到文档上、共同进步</p>
   </div>
   <div class="feature">
-    <h2>Performant</h2>
-    <p>VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.</p>
+    <h2>规范开发流程</h2>
+    <p>确立开发规范，减少因为规范不统一造成的效率低下、低级bug</p>
   </div>
 </div>
 
-<!-- <script>
-alert(1)  
-</script>   -->
-
-### As Easy as 1, 2, 3
+<!-- ### As Easy as 1, 2, 3
 
 ``` bash
 # install
@@ -50,4 +43,4 @@ vuepress build
 
 ::: warning COMPATIBILITY NOTE
 VuePress requires Node.js >= 8.
-:::
+::: -->

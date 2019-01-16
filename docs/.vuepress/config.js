@@ -8,7 +8,7 @@ module.exports = {
     base: '/Right-Now-FE/', // 项目名称
     repo: 'https://leeesin/github.io/Right-Now-FE', // 添加 github 链接
     head: [
-        ['link', { rel: 'icon', href: '/logo.png' }]
+        ['link', { rel: 'icon', href: '/favicon.ico' }]
         
     ],
     themeConfig: {

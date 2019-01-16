@@ -1,11 +1,17 @@
 module.exports = {
     sidebar: [
-        '/简介.md',
         {
-            title: '现在支付前端团队组件库(Vue)',
+            title: 'Vue组件库',
             collapsable: true,
             children: [
-                '/sync-date-picker'
+                '/Vue组件库/sync-date-picker'
+            ]
+        },
+        {
+            title: '小程序组件库',
+            collapsable: true,
+            children: [
+                '/小程序组件库/模态框'
             ]
         },
         {
@@ -39,10 +45,17 @@ module.exports = {
             ]
         },
         {
-            title: '小程序相关2',
+            title: '小程序相关',
             collapsable: true,
             children: [
                 encodeURI('/小程序相关/禁止再次分享.md')//vuepress 不支持中文文件名 先解码一下 
+            ]
+        },
+        {
+            title: '各前端项目文档',
+            collapsable: true,
+            children: [
+                encodeURI('/各前端项目文档/运营后台/doc.md')//vuepress 不支持中文文件名 先解码一下 
             ]
         },
         {
