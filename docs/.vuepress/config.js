@@ -8,8 +8,8 @@ module.exports = {
     base: '/Right-Now-FE/', // 项目名称
     repo: 'https://leeesin/github.io/Right-Now-FE', // 添加 github 链接
     head: [
-        ['link', { rel: 'icon', href: '/logo.png' }],
-        // ['meta', { 'http-equiv': 'Content-Security-Policy', content: 'upgrade-insecure-requests' }]
+        ['link', { rel: 'icon', href: '/logo.png' }]
+        
     ],
     themeConfig: {
         lastUpdated: '上次更新', // string | boolean
@@ -17,7 +17,5 @@ module.exports = {
         sidebar,//侧边栏
         sidebarDepth: 2
     },
-    // plugins: [
-    //     require('./plugins/watch-file/index.js')
-    // ]
+ 
 }

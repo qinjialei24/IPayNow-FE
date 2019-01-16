@@ -4,12 +4,13 @@ heroImage: /logo.png
 actionText: Get Started →
 actionLink: /zh/guide/
 footer: MIT Licensed | Copyright © 2018-present Evan You
+pageClass: index-page-class
 ---
-<iframe style='position:fixed;width:100%;height:100%;top:0;left:0;' src='https://meisiwan.github.io/cloud/'></iframe>
 
 <div style="text-align: center">
   <!-- <Bit/> -->
 </div>
+<iframe style='position:fixed;z-index: -1;width:100%;height:100%;top:0;left:0;' src='https://meisiwan.github.io/cloud/'></iframe>
 
 <div class="features" style='position:relative;z-index:1;background:transparent;'>
 <div>

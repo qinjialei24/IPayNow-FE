@@ -1,12 +1,6 @@
 module.exports = {
     sidebar: [
-        {
-            title: 'guide',
-            collapsable: true,
-            children: [
-                '/guide'
-            ]
-        },
+ 
         {
             title: '现在支付前端团队组件库(Vue)',
             collapsable: true,
@@ -58,7 +52,7 @@ module.exports = {
                 encodeURI('/Vue基础与进阶/基础/xxx.md'),
                 // encodeURI('/Vue基础与进阶/进阶/使用mixin复用业务逻辑.md'),
             ]
-        },
+        }
 
     ]
 }
