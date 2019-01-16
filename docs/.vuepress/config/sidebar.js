@@ -1,6 +1,13 @@
 module.exports = {
     sidebar: [
         {
+            title: 'guide',
+            collapsable: true,
+            children: [
+                '/guide'
+            ]
+        },
+        {
             title: '现在支付前端团队组件库(Vue)',
             collapsable: true,
             children: [

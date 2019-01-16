@@ -2,16 +2,29 @@
 home: true
 heroImage: /logo.png
 actionText: Get Started →
-actionLink: /guide/
+actionLink: /zh/guide/
 footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
-<iframe style='position:fixed;width:100%;height:100%;z-index:-1;top:0;left:0;' src='http://pixijs.teamgbaws.net/header/'></iframe>
+<iframe style='position:fixed;width:100%;height:100%;top:0;left:0;' src='https://meisiwan.github.io/cloud/'></iframe>
 
 <div style="text-align: center">
   <!-- <Bit/> -->
 </div>
 
-<div class="features">
+<div class="features" style='position:relative;z-index:1;background:transparent;'>
+<div>
+<a href="/xxx" style='display: inline-block;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #3eaf7c;
+    padding: .8rem 1.6rem;
+    border-radius: 4px;
+    -webkit-transition: background-color .1s ease;
+    transition: background-color .1s ease;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #389d70;' >进入文档 →</a>
+</div>
   <div class="feature">
     <h2>Simplicity First</h2>
     <img src='/logo.png'>
