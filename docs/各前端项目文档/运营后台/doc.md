@@ -1,66 +1,160 @@
-# 目录结构
+# 运营后台目录结构
 
-VuePress 遵循 **“约定优于配置”** 的原则，推荐的目录结构如下：
 
-::: Vue
-
-├── docs
-│   ├── .vuepress _(**可选的**)_
-│   │   ├── `components` _(**可选的**)_
-│   │   ├── `theme` _(**可选的**)_
-│   │   │   └── Layout.vue
-│   │   ├── `public` _(**可选的**)_
-│   │   ├── `styles` _(**可选的**)_
-│   │   │   ├── index.styl
-│   │   │   └── palette.styl
-│   │   ├── `templates` _(**可选的, 谨慎配置**)_
-│   │   │   ├── dev.html
-│   │   │   └── ssr.html
-│   │   ├── `config.js` _(**可选的**)_
-│   │   └── `enhanceApp.js` _(**可选的**)_
-│   │ 
-│   ├── README.md
-│   ├── guide
-│   │   └── README.md
-│   └── config.md
-│ 
-└── package.json
-
+::: danger 注意
+- `线上分支`为`develop`,开发时需从此分支拉取代码。
+- `测试分支`为`feature/opt-test`
 :::
 
-::: warning 注意
-请留意目录名的大写。
-:::
+- `common/js/directive.js`: 用于存放自定义组件，可以来这里看组件的api使用方法。
+- `common/views/menu.html`: 新加的页面需要到这里增加菜单
+- `common/controllers/controllers.js`:二级域名定义
 
-- `docs/.vuepress`: 用于存放全局的配置、组件、静态资源等。
-- `docs/.vuepress/components`: 该目录中的 Vue 组件将会被自动注册为全局组件。
-- `docs/.vuepress/theme`: 用于存放本地主题。
-- `docs/.vuepress/styles`: 用于存放样式相关的文件。
-- `docs/.vuepress/styles/index.styl`: 将会被自动应用的全局样式文件，会生成在最终的 CSS 文件结尾，具有比默认样式更高的优先级。
-- `docs/.vuepress/styles/palette.styl`: 用于重写默认颜色常量，或者设置新的 stylus 颜色常量。
-- `docs/.vuepress/public`: 静态资源目录。
-- `docs/.vuepress/templates`: 存储 HTML 模板文件。
-- `docs/.vuepress/templates/dev.html`: 用于开发环境的 HTML 模板文件。
-- `docs/.vuepress/templates/ssr.html`: 构建时基于 Vue SSR 的 HTML 模板文件。
-- `docs/.vuepress/config.js`: 配置文件的入口文件，也可以是 `YML` 或 `toml`。
-- `docs/.vuepress/enhanceApp.js`: 客户端应用的增强。
 
 ::: warning 注意
-当你想要去自定义 `templates/ssr.html` 或 `templates/dev.html` 时，最好基于 [默认的模板文件](https://github.com/vuejs/vuepress/blob/master/packages/%40vuepress/core/lib/app/index.dev.html) 来修改，否则可能会导致构建出错。
+开发项目时切记运行 `gulp run`，这会将路由编译到`all.route.config.js`,否则需要在`all.route.config.js`内创建路由，
+因为该文件内代码较多，不建议直接在此文件新增路由。
 :::
 
 **同时阅读:** 
 
-- [配置](../config/README.md)
-- [主题](../theme/README.md)
-- [默认主题配置](../theme/default-theme-config.md)
+- [线上代码发布注意事项](/线上代码发布注意事项/必看.md)
 
-## 默认的页面路由
+```
+├─aggregation
+│  ├─controllers
+│  │  ├─account
+│  │  └─twoAccount
+│  └─views
+│      ├─account
+│      └─twoAccount
+├─app-center
+│  ├─controllers
+│  │  └─appBizCenter
+│  └─views
+│      └─appBizCenter
+├─auth-sms
+│  ├─controllers
+│  │  ├─authentication
+│  │  └─noteManagement
+│  └─views
+│      ├─authentication
+│      └─noteManagement
+├─common                公共模块文件(公共组件、二级域名定义、菜单配置、全局方法)
+│  ├─controllers
+│  │  └─accountCenter
+│  ├─datacenter
+│  ├─dialog                 弹框组件
+│  ├─js
+│    ├─factory.js             全局方法
+│    ├─directive.js           公共组件   
+│  ├─css
+│  ├─style
+│  │  ├─css
+│  │  │  └─min
+│  │  ├─fonts
+│  │  ├─images
+│  │  ├─js
+│  │  │  ├─min
+│  │  │  └─skin
+│  │  │      └─default
+│  │  └─plugins
+│  │      ├─datetimepicker
+│  │      ├─layer
+│  │      │  └─skin
+│  │      │      └─default
+│  │      ├─scrollbar
+│  │      ├─upload
+│  │      ├─validate
+│  │      └─viewer
+│  └─views
+│      └─accountCenter
+├─hunter
+│  ├─controllers
+│  │  └─mchActivity
+│  └─views
+│      └─mchActivity
+├─interpay
+│  ├─controllers
+│  │  └─transaction
+│  └─views
+│      └─transaction
+├─oa
+│  ├─controllers
+│  │  └─task
+│  └─views
+│      └─task
+├─op-sam-charge
+│  ├─controllers
+│  │  ├─bc
+│  │  └─settleManager
+│  └─views
+│      ├─bc
+│      └─settleManager
+├─op-sam-mch
+│  ├─controllers
+│  │  └─mchManager
+│  └─views
+│      └─mchManager
+│          └─protocol
+├─op-sam-recon
+│  ├─controllers
+│  │  ├─billManager
+│  │  ├─financeManager
+│  │  ├─financialPlatform
+│  │  └─p2p
+│  └─views
+│      ├─billManager
+│      ├─financeManager
+│      ├─financialPlatform
+│      └─p2p
+├─payForOther
+│  ├─controllers
+│  │  ├─deal
+│  │  ├─payConfigure
+│  │  └─refundManage
+│  └─views
+│      ├─deal
+│      ├─payConfigure
+│      └─refundManage
+├─pratAccount
+│  ├─controllers
+│  └─views
+├─project
+│  ├─controllers
+│  │  └─projectManage
+│  └─views
+│      └─projectManage
+├─rc
+│  ├─controllers
+│  │  └─riskManager
+│  └─views
+│      └─riskManager
+├─tc                    交易管理
+│  ├─controllers
+│  │  └─tradeCenter
+│  └─views
+│      └─tradeCenter
+├─trade-model           业务管理
+│  ├─controllers
+│  │  ├─collection
+│  │  ├─datacenter
+│  │  │  ├─analysis
+│  │  │  └─finance
+│  │  ├─stopCar
+│  │  └─terminalManage
+│  └─views
+│      ├─collection
+│      ├─datacenter
+│      │  ├─admin
+│      │  ├─analysis
+│      │  └─finance
+│      ├─stopCar
+│      └─terminalManage
+└─wap
+    ├─css
+    │  └─iconfont
+    ├─images
+    └─js
 
-此外，对于上述的目录结构，默认页面路由地址如下：
-
-| 文件的相对路径 | 页面路由地址 |
-|---|---|
-| `/README.md` | `/` |
-| `/guide/README.md` | `/guide/` |
-| `/config.md` | `/config.html` |
+```

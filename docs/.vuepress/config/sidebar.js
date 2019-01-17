@@ -1,6 +1,14 @@
 module.exports = {
     sidebar: [
         {
+            title: '开发规范',
+            collapsable: true,
+            children: [
+                '/开发规范/Vue开发规范.md',
+                '/开发规范/接口开发规范.md',
+            ]
+        },
+        {
             title: 'Vue组件库',
             collapsable: true,
             children: [
@@ -65,7 +73,14 @@ module.exports = {
                 encodeURI('/Vue基础与进阶/基础/xxx.md'),
                 // encodeURI('/Vue基础与进阶/进阶/使用mixin复用业务逻辑.md'),
             ]
-        }
+        },
+        {
+            title: '线上代码发布注意事项',
+            collapsable: true,
+            children: [
+                '/线上代码发布注意事项/必看',
+            ]
+        },
 
     ]
 }
