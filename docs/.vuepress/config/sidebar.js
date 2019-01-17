@@ -9,10 +9,31 @@ module.exports = {
             ]
         },
         {
+            title: '线上代码发布注意事项',
+            collapsable: true,
+            children: [
+                '/线上代码发布注意事项/必看',
+            ]
+        },
+        {
+            title: '各前端项目文档',
+            collapsable: true,
+            children: [
+                encodeURI('/各前端项目文档/运营后台/doc.md')//vuepress 不支持中文文件名 先解码一下 
+            ]
+        },
+        {
             title: 'Vue组件库',
             collapsable: true,
             children: [
                 '/Vue组件库/sync-date-picker'
+            ]
+        },
+        {
+            title: 'Vue基础与进阶',
+            collapsable: true,
+            children: [
+                encodeURI('/Vue基础与进阶/进阶/使用mixin复用业务逻辑.md'),
             ]
         },
         {
@@ -52,27 +73,5 @@ module.exports = {
                 encodeURI('/小程序相关/禁止再次分享.md')//vuepress 不支持中文文件名 先解码一下 
             ]
         },
-        {
-            title: '各前端项目文档',
-            collapsable: true,
-            children: [
-                encodeURI('/各前端项目文档/运营后台/doc.md')//vuepress 不支持中文文件名 先解码一下 
-            ]
-        },
-        {
-            title: 'Vue基础与进阶',
-            collapsable: true,
-            children: [
-                encodeURI('/Vue基础与进阶/进阶/使用mixin复用业务逻辑.md'),
-            ]
-        },
-        {
-            title: '线上代码发布注意事项',
-            collapsable: true,
-            children: [
-                '/线上代码发布注意事项/必看',
-            ]
-        },
-
     ]
 }
