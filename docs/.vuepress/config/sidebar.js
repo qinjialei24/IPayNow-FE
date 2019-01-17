@@ -23,13 +23,6 @@ module.exports = {
             ]
         },
         {
-            title: 'mixins',
-            collapsable: true,
-            children: [
-                '/mixins/loading'
-            ]
-        },
-        {
             title: '技术文章精选',
             collapsable: true,
             children: [
@@ -70,8 +63,7 @@ module.exports = {
             title: 'Vue基础与进阶',
             collapsable: true,
             children: [
-                encodeURI('/Vue基础与进阶/基础/xxx.md'),
-                // encodeURI('/Vue基础与进阶/进阶/使用mixin复用业务逻辑.md'),
+                encodeURI('/Vue基础与进阶/进阶/使用mixin复用业务逻辑.md'),
             ]
         },
         {
