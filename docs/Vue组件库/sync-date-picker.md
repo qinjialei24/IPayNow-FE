@@ -1,4 +1,3 @@
-
 # sync-date-picker组件 
 ### 封装elementUI daterange 组件 支持传入两个字段
 ``` vue

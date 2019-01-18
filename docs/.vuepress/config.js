@@ -9,13 +9,16 @@ module.exports = {
     repo: 'https://leeesin/github.io/Right-Now-FE', // 添加 github 链接
     head: [
         ['link', { rel: 'icon', href: '/favicon.ico' }]
-        
+
     ],
+    markdown: {
+        lineNumbers: true
+    },
     themeConfig: {
         lastUpdated: '上次更新', // string | boolean
         nav,//导航栏
         sidebar,//侧边栏
         sidebarDepth: 2
     },
- 
+
 }

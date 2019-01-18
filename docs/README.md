@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo.png
 actionText: 进入文档 →
-actionLink: /sync-date-picker.html
+actionLink: /共勉.html
 footer:  Copyright ©iPayNow 2017 京ICP备13029197号
 pageClass: index-page-class
 ---
@@ -24,23 +24,3 @@ pageClass: index-page-class
   </div>
 </div>
 
-<!-- ### As Easy as 1, 2, 3
-
-``` bash
-# install
-yarn global add vuepress@next 
-# OR npm install -g vuepress@next
-
-# create a markdown file
-echo '# Hello VuePress' > README.md
-
-# start writing
-vuepress dev
-
-# build to static files
-vuepress build
-```
-
-::: warning COMPATIBILITY NOTE
-VuePress requires Node.js >= 8.
-::: -->
