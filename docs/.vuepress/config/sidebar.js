@@ -1,6 +1,6 @@
 module.exports = {
     sidebar: [
-        '/共勉.md',
+        // '/共勉.md',
         {
             title: '开发规范',
             collapsable: false,
