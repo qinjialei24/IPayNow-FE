@@ -1,14 +1,14 @@
 module.exports = {
     nav: [
         {
-            text: 'Vue第三方UI库',
+            text: 'Vue第三方组件库',
             items: [
                 { text: 'iview', link: 'https://www.iviewui.com/' },
                 { text: 'elementUI', link: 'http://element-cn.eleme.io/#/zh-CN/component/installation' }
             ]
         },
         {
-            text: '小程序第三方UI库',
+            text: '小程序第三方组件库',
             items: [
                 { text: '有赞', link: 'https://youzan.github.io/vant-weapp/#/intro' }
             ]

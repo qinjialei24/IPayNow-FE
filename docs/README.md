@@ -2,7 +2,7 @@
 home: true
 heroImage: /logo.png
 actionText: 进入文档 →
-actionLink: /共勉.html
+actionLink: /开发规范/Vue开发规范.html
 footer:  Copyright ©iPayNow 2017 京ICP备13029197号
 pageClass: index-page-class
 ---
