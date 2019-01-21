@@ -25,7 +25,6 @@ module.exports = {
                 '/线上代码发布注意事项/必看',
             ]
         },
-    
         {
             title: 'Vue组件库',
             collapsable: false,
@@ -33,6 +32,7 @@ module.exports = {
                 '/Vue组件库/two-fields-date-picker.md',
                 '/Vue组件库/分页组件.md',
                 '/Vue组件库/权限树组件.md',
+                '/Vue组件库/v-card.md',
             ]
         },
         {
