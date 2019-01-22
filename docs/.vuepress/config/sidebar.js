@@ -18,6 +18,7 @@ module.exports = {
                 encodeURI('/各前端项目文档/运营后台/doc.md'),//vuepress 不支持中文文件名 先解码一下 
                 encodeURI('/各前端项目文档/易售云小程序/doc.md'),//vuepress 不支持中文文件名 先解码一下 
                 encodeURI('/各前端项目文档/易售云后台管理系统/doc.md'),//vuepress 不支持中文文件名 先解码一下 
+                encodeURI('/各前端项目文档/开张吉祥收银插件/doc.md'),
             ]
         },
         {
