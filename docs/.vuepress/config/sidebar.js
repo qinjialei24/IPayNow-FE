@@ -4,18 +4,20 @@ module.exports = {
             title: '开发规范',
             collapsable: false,
             children: [
-                '/开发规范/Vue开发规范.md',
                 '/开发规范/接口开发规范.md',
                 '/开发规范/js开发规范.md',
                 '/开发规范/css开发规范.md',
                 '/开发规范/html开发规范.md',
+                '/开发规范/Vue开发规范.md',
             ]
         },
         {
             title: '项目文档',
             collapsable: false,
             children: [
-                encodeURI('/各前端项目文档/运营后台/doc.md')//vuepress 不支持中文文件名 先解码一下 
+                encodeURI('/各前端项目文档/运营后台/doc.md'),//vuepress 不支持中文文件名 先解码一下 
+                encodeURI('/各前端项目文档/易售云小程序/doc.md'),//vuepress 不支持中文文件名 先解码一下 
+                encodeURI('/各前端项目文档/易售云后台管理系统/doc.md'),//vuepress 不支持中文文件名 先解码一下 
             ]
         },
         {
@@ -23,6 +25,13 @@ module.exports = {
             collapsable: false,
             children: [
                 '/线上代码发布注意事项/必看',
+            ]
+        },
+        {
+            title: 'JS工具函数',
+            collapsable: false,
+            children: [
+                encodeURI('/JS工具函数/COPY.md')//vuepress 不支持中文文件名 先解码一下 
             ]
         },
         {
@@ -36,7 +45,7 @@ module.exports = {
             ]
         },
         {
-            title: 'Vue基础与进阶',
+            title: 'Vue进阶',
             collapsable: false,
             children: [
                 encodeURI('/Vue基础与进阶/进阶/使用mixin复用业务逻辑.md'),
@@ -54,13 +63,6 @@ module.exports = {
             collapsable: false,
             children: [
                 encodeURI('/electron踩坑/设置透明窗口时的兼容性问题')//vuepress 不支持中文文件名 先解码一下 
-            ]
-        },
-        {
-            title: 'JS工具函数',
-            collapsable: false,
-            children: [
-                encodeURI('/JS工具函数/COPY.md')//vuepress 不支持中文文件名 先解码一下 
             ]
         },
         {
