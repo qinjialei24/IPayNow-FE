@@ -66,10 +66,11 @@ module.exports = {
             ]
         },
         {
-            title: '小程序相关',
+            title: '小程序踩坑',
             collapsable: false,
             children: [
-                encodeURI('/小程序相关/禁止再次分享.md')//vuepress 不支持中文文件名 先解码一下 
+                encodeURI('/小程序踩坑/禁止再次分享.md'),//vuepress 不支持中文文件名 先解码一下 
+                '/小程序踩坑/小程序授权解决方案总结.md',
             ]
         },
         {
