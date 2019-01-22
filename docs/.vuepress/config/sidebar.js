@@ -5,6 +5,7 @@ module.exports = {
             collapsable: false,
             children: [
                 '/开发规范/接口开发规范.md',
+                '/开发规范/网页head标签规范.md',
                 '/开发规范/js开发规范.md',
                 '/开发规范/css开发规范.md',
                 '/开发规范/html开发规范.md',
@@ -82,6 +83,13 @@ module.exports = {
                 '/技术文章精选/200行代码实现简版react.md',
                 '/技术文章精选/Promise实现详解.md',
                 '/技术文章精选/利用Vue原理实现一个mini版的MVVM框架.md',
+            ]
+        },
+        {
+            title: '前端九部',
+            collapsable: false,
+            children: [
+                '/前端九部/doc.md',
             ]
         },
     ]
