@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "mkdir": "node mkdir.js",
     "docs": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "deploy": "gh-pages -d dist",
