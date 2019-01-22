@@ -16,7 +16,7 @@ module.exports = {
     themeConfig: {
         repo: 'Leeesin/IPayNow-FE',
         repoLabel: '查看源码',
-        docsBranch: 'master',
+        docsBranch: 'master/docs',
         editLinks: true,
         editLinkText: '在 GitHub 上编辑此页',
         lastUpdated: '上次更新', // string | boolean
