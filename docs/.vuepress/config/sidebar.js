@@ -4,12 +4,12 @@ module.exports = {
             title: '开发规范',
             collapsable: false,
             children: [
-                '/开发规范/接口开发规范.md',
                 '/开发规范/网页head标签规范.md',
                 '/开发规范/js开发规范.md',
                 '/开发规范/css开发规范.md',
                 '/开发规范/html开发规范.md',
                 '/开发规范/Vue开发规范.md',
+                '/开发规范/接口开发规范.md',
             ]
         },
         {
