@@ -23,10 +23,10 @@ module.exports = {
             ]
         },
         {
-            title: '线上代码发布注意事项',
+            title: '生产环境代码发布注意事项',
             collapsable: false,
             children: [
-                '/线上代码发布注意事项/必看',
+                '/生产环境代码发布注意事项/必看',
             ]
         },
         {
