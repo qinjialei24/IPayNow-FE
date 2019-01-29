@@ -34,7 +34,8 @@ module.exports = {
             title: 'JS工具函数',
             collapsable: false,
             children: [
-                encodeURI('/JS工具函数/COPY.md')//vuepress 不支持中文文件名 先解码一下 
+                encodeURI('/JS工具函数/COPY.md'),
+                encodeURI('/JS工具函数/轮询函数.md'),
             ]
         },
         {
