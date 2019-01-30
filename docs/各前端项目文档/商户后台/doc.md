@@ -6,6 +6,7 @@
 1. 运行 `npm i`安装全部依赖
 1. [下载此处的文件](https://github.com/Leeesin/ipaynow-change-modules/archive/master.zip)替换`node_module`中`gulp-rev-collector`、`gulp-rev`文件(修复无法打版本号的问题)
 1. 在根目录下的`server.js`文件运行 `node server.js`（不再使用`nginx`进行代理，采用`node.js`代理)
+2. 运行`gulp run`
 :::
 
 

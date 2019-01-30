@@ -4,9 +4,17 @@
 ::: tip 
 1. git clone `git@code.ipaynow.cn:operation_center/operation_frontend.git`
 2. 运行 `npm i`安装全部依赖
-3. 在根目录下的`server.js`文件运行 `node server.js`（不再使用`nginx`进行代理，采用`node.js`代理)
+3.  [下载此处的文件](https://github.com/Leeesin/ipaynow-change-modules/archive/master.zip)替换`node_module`中`gulp-rev-collector`、`gulp-rev`文件(修复无法打版本号的问题)
+4. 在根目录下的`server.js`文件运行 `node server.js`（不再使用`nginx`进行代理，采用`node.js`代理)
+5. 运行`gulp run`
 :::
 
+
+## 分支说明
+::: danger 
+- `生产环境分支`为`develop`,`开发`时需从此分支拉取代码。
+- `测试环境分支`为`feature/opt-test`，`测试`时提醒相关人员从此分支拉取测试,
+:::
 
 
 
@@ -22,8 +30,6 @@
 
 ## 开发注意事项
 ::: danger 
-- `线上分支`为`develop`,开发时需从此分支拉取代码。
-- `测试分支`为`feature/opt-test`
 - 开发项目时切记运行 `gulp run`，这会将路由编译到`all.route.config.js`,否则需要在`all.route.config.js`内创建路由，
 因为该文件内代码较多，不建议直接在此文件新增路由。
 :::
