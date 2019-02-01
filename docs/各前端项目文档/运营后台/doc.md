@@ -40,6 +40,11 @@
 
 - server.js文件
 ```js
+
+
+
+var fallback = require('express-history-api-fallback')
+
 var express = require('express');
 var proxyMiddleWare = require("http-proxy-middleware");
 var fallback = require('express-history-api-fallback')
@@ -47,30 +52,71 @@ var fallback = require('express-history-api-fallback')
 var app = express();
 var root = __dirname + '/';
 app.use(express.static(root));
+var path = {   // 反向代理路径
+  'main': 'http://192.168.51.60:18880',  //登录 权限
+  'tc': 'http://192.168.101.13:8085',  //交易中心
+  'settle': 'http://192.168.99.61:8080', //分账系统 、计费中心
+  'crm': 'http://192.168.99.61:8080', //赏金猎人
+  'app_center': 'http://192.168.101.13:8085', //应用中心
+  'tradeModel': 'http://192.168.99.54:8380', // 业务管理
+  'bill': 'http://192.168.99.61:8080', //金融平台
+  'mch': 'http://192.168.99.61:8080', // 商户中心
+  'auth_sms': 'http://192.168.99.60:8080', //鉴权和短信
+  'interpay_boss': 'http://192.168.99.54:8580', //跨境
+  'agg_acc_web_op': 'http://192.168.0.51:18050', //聚合账户
+}
+
+
+app.use('/main', proxyMiddleWare({
+  target: path.main,
+  changeOrigoin: true
+}))
+app.use('/tc', proxyMiddleWare({
+  target: path.tc,
+  changeOrigoin: true
+}))
+app.use('/settle', proxyMiddleWare({
+  target: path.settle,
+  changeOrigoin: true
+}))
+app.use('/app_center', proxyMiddleWare({
+  target: path.app_center,
+  changeOrigoin: true
+}))
+app.use('/tradeModel', proxyMiddleWare({
+  target: path.tradeModel,
+  changeOrigoin: true
+}))
+app.use('/bill', proxyMiddleWare({
+  target: path.bill,
+  changeOrigoin: true
+}))
+app.use('/mch', proxyMiddleWare({
+  target: path.mch,
+  changeOrigoin: true
+}))
+app.use('/auth-sms', proxyMiddleWare({
+  target: path.auth_sms,
+  changeOrigoin: true
+}))
+app.use('/interpay_boss', proxyMiddleWare({
+  target: path.interpay_boss,
+  changeOrigoin: true
+}))
+app.use('/agg_acc_web_op', proxyMiddleWare({
+  target: path.agg_acc_web_op,
+  changeOrigoin: true
+}))
+app.use('/agg_acc_web_op', proxyMiddleWare({
+  target: path.agg_acc_web_op,
+  changeOrigoin: true
+}))
+
 app.use(fallback('index.html', { root: root }));
 
-var path = { // 反向代理路径
-    '/main': 'http://192.168.51.60:18880', //登录 权限
-    '/tc': 'http://192.168.101.13:8085', //交易中心
-    '/settle': 'http://192.168.99.61:8080', //分账系统 、计费中心
-    '/crm': 'http://192.168.99.61:8080', //赏金猎人
-    '/app_center': 'http://192.168.101.13:8085', //应用中心
-    '/tradeModel': 'http://192.168.99.54:8380', // 业务管理
-    '/bill': 'http://192.168.99.61:8080', //金融平台
-    '/mch': 'http://192.168.99.61:8080', // 商户中心
-    '/auth_sms': 'http://192.168.99.60:8080', //鉴权和短信
-    '/interpay_boss': 'http://192.168.99.54:8580', //跨境
-    '/agg_acc_web_op': 'http://192.168.0.51:18050', //聚合账户
-}
-Object.keys(path).forEach(key => {
-    app.use(key, proxyMiddleWare({
-        target: path[key],
-        changeOrigoin: true
-    }))
-})
-
-app.listen(8000, () => {
-    console.log('open http://localhost:8000');
+app.listen(9001, () => {
+  console.log('open http://localhost:9001');
 });
+
 ```
 
