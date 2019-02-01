@@ -1,8 +1,8 @@
-# 嗖嗖短信后台界面
+# 嗖嗖短信后台管理系统
 
 ## 如何运行
 ::: tip 
-1. git clone `git@code.ipaynow.cn:npaccount/sms-merchant-www.git
+1. git clone `git@code.ipaynow.cn:npaccount/sms-merchant-www.git`
 2. sms-merchant-www 目录下 打开命令行 输入 http-server
 3. 打包测试上线 gulp run dev
 :::
