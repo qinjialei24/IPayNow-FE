@@ -26,6 +26,12 @@
 - `common/controllers/controllers.js`:二级域名定义
 :::
 
+## 功能参考页面
+::: tip 
+- `图片上传`:mchInputCom
+:::
+
+
 
 
 ## 开发注意事项
