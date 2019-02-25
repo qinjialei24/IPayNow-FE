@@ -21,7 +21,8 @@
 
 ## 主要文件
 ::: danger 
-- `common/js/directive.js`: 用于存放自定义组件，可以来这里看组件的api使用方法。
+- `common/components/basic`:基础组件,与业务无关
+- `common/components/business`:业务组件,基于基础组件封装而成
 - `common/views/menu.html`: 新加的页面需要到这里增加菜单
 - `common/controllers/controllers.js`:二级域名定义
 :::
