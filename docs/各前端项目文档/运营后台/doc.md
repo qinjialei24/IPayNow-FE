@@ -25,6 +25,39 @@
 - `common/components/business`:业务组件,基于基础组件封装而成
 - `common/views/menu.html`: 新加的页面需要到这里增加菜单
 - `common/controllers/controllers.js`:二级域名定义
+- `common/utils/index.js`:定义了一些工具方法和通用的业务逻辑处理
+  -  表格查询 `getTable`方法，只需要传入url,即可实现分页的表格查询功能 ，如下
+    ```js
+     _.getTable({
+        url: $rootScope.opSamMchLevel + 'kaMchManager/queryKaMchList.do',
+        $scope: $scope,
+        public: public,
+        $rootScope: $rootScope,
+    })
+    ```
+  - 封装的ajax方法 `http`方法，和之前的方法比主要有以下改进：
+    - 自动处理提示信息，不需要自己根据状态判断,第二个参数为`true`时，则弹出提示信息
+    -  封装错误处理逻辑
+    -  抛弃回调,采用`promise`风格api
+    ```js
+      _.http({
+            public,//页面所在public对象
+            url: $rootScope.appBizCenterContext + 'common/selectDataDic.do',
+            data: {
+                dataType: '85'
+            }
+        },true).then(function (res) {
+          //返回的数据
+        }
+        )
+    ```
+  -  打开查询商户信息弹框 `openMchDialog`方法，只需要传入页面所在的`public`和`layer`对象和`回调函数`,即可实现自动弹框查询商户功能,如下
+    ```js
+      _.openMchDialog(public, layer).then(function (res) {
+        //res 为用户点击商户号所在行的数据
+        })
+    ```
+ 
 :::
 
 ## 功能参考页面
