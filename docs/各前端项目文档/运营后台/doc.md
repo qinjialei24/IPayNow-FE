@@ -12,7 +12,7 @@
 
 ##  分支说明
 ::: danger 
-- `生产环境分支`为`develop`,`开发`时需从此分支拉取代码。
+- `生产环境分支`为`master`,`开发`时需从此分支拉取代码。
 - `测试环境分支`为`feature/opt-test`，`测试`时提醒相关人员从此分支拉取测试,
 :::
 
@@ -41,7 +41,7 @@
     -  抛弃回调,采用`promise`风格api
     ```js
       _.http({
-            public,//页面所在public对象
+            public:public,//页面所在public对象
             url: $rootScope.appBizCenterContext + 'common/selectDataDic.do',
             data: {
                 dataType: '85'
